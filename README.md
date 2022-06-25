@@ -5,19 +5,19 @@
 With NPM:
 
 ```bash
-$ npm create angular@latest
+$ npm create ng@latest
 ```
 
 With Yarn:
 
 ```bash
-$ yarn create angular
+$ yarn create ng
 ```
 
 With PNPM:
 
 ```bash
-$ pnpm create angular
+$ pnpm create ng
 ```
 
 Then follow the prompts!
@@ -26,16 +26,16 @@ You can also directly specify the project name and the template you want to use 
 
 ```bash
 # npm 6.x
-npm create angular@latest my-angular-app --template angular-v14
+npm create ng@latest my-angular-app --template angular-v14
 
 # npm 7+, extra double-dash is needed:
-npm create angular@latest my-angular-app -- --template angular-v14
+npm create ng@latest my-angular-app -- --template angular-v14
 
 # yarn
-yarn create angular my-angular-app --template angular-v14
+yarn create ng my-angular-app --template angular-v14
 
 # pnpm
-pnpm create angular my-angular-app --template angular-v14
+pnpm create ng my-angular-app --template angular-v14
 ```
 
 Currently supported template presets include:
