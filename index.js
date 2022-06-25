@@ -22,106 +22,26 @@ import {
 const argv = minimist(process.argv.slice(2), { string: ['_'] })
 const cwd = process.cwd()
 
-const FRAMEWORKS = [
+const APPS = [
   {
-    name: 'vanilla',
+    name: 'Angular V14',
     color: yellow,
     variants: [
       {
-        name: 'vanilla',
-        display: 'JavaScript',
+        name: 'angular-v14',
+        display: 'TypeScript',
         color: yellow
       },
       {
-        name: 'vanilla-ts',
+        name: 'angular-v14-standalone',
         display: 'TypeScript',
         color: blue
-      }
-    ]
-  },
-  {
-    name: 'vue',
-    color: green,
-    variants: [
-      {
-        name: 'vue',
-        display: 'JavaScript',
-        color: yellow
-      },
-      {
-        name: 'vue-ts',
-        display: 'TypeScript',
-        color: blue
-      }
-    ]
-  },
-  {
-    name: 'react',
-    color: cyan,
-    variants: [
-      {
-        name: 'react',
-        display: 'JavaScript',
-        color: yellow
-      },
-      {
-        name: 'react-ts',
-        display: 'TypeScript',
-        color: blue
-      }
-    ]
-  },
-  {
-    name: 'preact',
-    color: magenta,
-    variants: [
-      {
-        name: 'preact',
-        display: 'JavaScript',
-        color: yellow
-      },
-      {
-        name: 'preact-ts',
-        display: 'TypeScript',
-        color: blue
-      }
-    ]
-  },
-  {
-    name: 'lit',
-    color: lightRed,
-    variants: [
-      {
-        name: 'lit',
-        display: 'JavaScript',
-        color: yellow
-      },
-      {
-        name: 'lit-ts',
-        display: 'TypeScript',
-        color: blue
-      }
-    ]
-  },
-  {
-    name: 'svelte',
-    color: red,
-    variants: [
-      {
-        name: 'svelte',
-        display: 'JavaScript',
-        color: yellow
-      },
-      {
-        name: 'svelte-ts',
-        display: 'TypeScript',
-        color: blue
-      }
+      },      
     ]
   }
 ]
 
-const TEMPLATES = FRAMEWORKS.map(
+const TEMPLATES = APPS.map(
   (f) => (f.variants && f.variants.map((v) => v.name)) || [f.name]
 ).reduce((a, b) => a.concat(b), [])
 
@@ -133,7 +53,7 @@ async function init() {
   let targetDir = formatTargetDir(argv._[0])
   let template = argv.template || argv.t
 
-  const defaultTargetDir = 'vite-project'
+  const defaultTargetDir = 'angular-project'
   const getProjectName = () =>
     targetDir === '.' ? path.basename(path.resolve()) : targetDir
 
@@ -186,9 +106,9 @@ async function init() {
               ? reset(
                   `"${template}" isn't a valid template. Please choose from below: `
                 )
-              : reset('Select a framework:'),
+              : reset('Select a template:'),
           initial: 0,
-          choices: FRAMEWORKS.map((framework) => {
+          choices: APPS.map((framework) => {
             const frameworkColor = framework.color
             return {
               title: frameworkColor(framework.name),
@@ -279,11 +199,11 @@ async function init() {
   switch (pkgManager) {
     case 'yarn':
       console.log('  yarn')
-      console.log('  yarn dev')
+      console.log('  yarn start')
       break
     default:
       console.log(`  ${pkgManager} install`)
-      console.log(`  ${pkgManager} run dev`)
+      console.log(`  ${pkgManager} start`)
       break
   }
   console.log()

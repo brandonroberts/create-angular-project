@@ -1,6 +1,6 @@
 {
   "name": "create-angular",
-  "version": "2.9.3",
+  "version": "0.0.1",
   "type": "module",
   "license": "MIT",
   "author": "Brandon Roberts",
@@ -17,12 +17,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vitejs/vite.git"
+    "url": "git+https://github.com/brandonroberts/create-vite.git"
   },
   "bugs": {
-    "url": "https://github.com/vitejs/vite/issues"
+    "url": "https://github.com/brandonroberts/create-vite/issues"
   },
-  "homepage": "https://github.com/vitejs/vite/tree/main/packages/create-vite#readme",
+  "homepage": "https://github.com/brandonroberts/create-vite/tree/main/packages/create-vite#readme",
   "dependencies": {
     "kolorist": "^1.5.1",
     "minimist": "^1.2.6",
