@@ -1,23 +1,23 @@
-# create-angular
+# create-angular-project
 
 ## Scaffolding Your First Angular Project
 
 With NPM:
 
 ```bash
-$ npm create ng@latest
+$ npm create angular-project@latest
 ```
 
 With Yarn:
 
 ```bash
-$ yarn create ng
+$ yarn create angular-project
 ```
 
 With PNPM:
 
 ```bash
-$ pnpm create ng
+$ pnpm create angular-project
 ```
 
 Then follow the prompts!
@@ -26,16 +26,16 @@ You can also directly specify the project name and the template you want to use 
 
 ```bash
 # npm 6.x
-npm create ng@latest my-angular-app --template angular-v14
+npm create angular-project@latest my-angular-app --template angular-v14
 
 # npm 7+, extra double-dash is needed:
-npm create ng@latest my-angular-app -- --template angular-v14
+npm create angular-project@latest my-angular-app -- --template angular-v14
 
 # yarn
-yarn create ng my-angular-app --template angular-v14
+yarn create angular-project my-angular-app --template angular-v14
 
 # pnpm
-pnpm create ng my-angular-app --template angular-v14
+pnpm create angular-project my-angular-app --template angular-v14
 ```
 
 Currently supported template presets include:
